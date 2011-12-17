@@ -13,7 +13,4 @@ Running the package:
 
 Examples:
   The subdirectory `grp' contains various examples of pc groups. They
-  can be used as examples for applications of the package. Moreover, in
-  the subdirectory `tst' we include the input that has been used to
-  obtain the example section of our manual, as well as the
-  corresponding output file.
+  can be used as examples for applications of the package.

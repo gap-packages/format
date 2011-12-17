@@ -2,14 +2,14 @@
 %%
 %W  others.tex            FORMAT documentation  B. Eick and C.R.B. Wright
 %%
-%% 10-30-00
+%% 10-31-11
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Chapter{Other Applications}
 
 %\index{Other Applications}
 
-Up to this point our screens, i.e., normal subgroup functions, have yielded local formation residual subgroups, but there is no requirement that they do so. Screens for which the selected normal subgroups can be arbitrary have applications beyond formation theory. Chapter V of \cite{CH} contains an account of a generalized normalizer theory built from them, and Wright (\cite{WA}~and~\cite{WB}) uses them to construct internal versions of formations that are conceptually related to ordinary formations much as Fitting sets are related to Fitting classes.
+Up to this point our screens, i.e., normal subgroup functions, have yielded local formation residual subgroups, but there is no requirement that they do so. Screens for which the selected normal subgroups can be arbitrary have applications beyond formation theory. Chapter V of \cite{CH} contains an account of a generalized normalizer theory built from them, and Wright (\cite{WA} and \cite{WB}) uses them to construct internal versions of formations that are conceptually related to ordinary formations much as Fitting sets are related to Fitting classes.
 
 A major application of the generalized normalizers is to speed up computation of complements to normal factors (see~\cite{EW}).
 Suppose that $G$ is a finite solvable group with an elementary abelian
@@ -21,7 +21,7 @@ elementary abelian normal subgroup, in this case to $K$ in $S_4$ with $N =
 A_4$. 
 
 We need to define a formation `F' in {\GAP} (not a real formation,
-of course, just a local version) such that `ScreenOfFormation( F )(s4,p)' returns $N$ for
+of course, just a local version) such that `ScreenOfFormation( F )(s4,p)' returns $A_4$ for
 every call. In order to call `FNormalizerWrtFormation' we must also set the property
 `IsIntegrated' to `true'.
 \beginexample
@@ -33,7 +33,7 @@ gap> form := Formation(preform);
 formation of ForComplement groups 
 gap> SetIsIntegrated(form, true);
 \endexample
-Now we may use the `FNormalizerWrtFormation' function with `s4' to
+Now we may use  `FNormalizerWrtFormation'  with `s4' to
 get the complement, an $S_3$. (Recall that unless `form' already
 thinks it's integrated, `FNormalizerWrtFormation' will automatically
 integrate `form' before running its computations, which may not be

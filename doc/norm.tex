@@ -2,7 +2,7 @@
 %%
 %W  norm.tex              FORMAT documentation    B. Eick and C.R.B. Wright
 %%
-%%  10-30-00
+%%  10-31-11
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Chapter{FNormalizers}
@@ -10,16 +10,26 @@
 %\index{FNormalizers}
 
 Let $\F$ be an integrated locally defined formation, and let $G$ be 
-a finite solvable group with Sylow complement basis $\Sigma := 
-\{ S^p \mid p$ divides  $ \|G\| \}$.  Let $\pi$ be the set of prime
+a finite solvable group with Sylow complement basis 
+%display{tex}
+$\Sigma := 
+\{ S^p \mid p$ divides  $ \|G\| \}$. 
+%display{html}
+%$\Sigma$.
+%enddisplay
+Let $\pi$ be the set of prime
 divisors of the order of $G$ that are in the support of $\F$ and 
-$\overline{\pi}$ the remaining prime divisors of the order  of $G$. 
+${\nu}$ the remaining prime divisors of the order  of $G$. 
 Then the *$\F$-normalizer* of $G$ with respect to $\Sigma$ is defined 
-to be  
-$\bigcap_{p \in \overline{\pi}} S^p \cap 
+to be
+%display{tex}  
+$\bigcap_{q \in \nu} S^q \cap 
  \bigcap_{p \in \pi} N_G( G^{\F(p)} \cap S^p )$. 
+%display{html}
+%[see the PDF manual].
+%enddisplay
 The special case $\F(p) = \{ 1 \}$ for all $p$ defines the formation 
-of nilpotent groups, whose $\F$-normalizers $ \bigcap_{p} N_G( S^p )$ 
+of nilpotent groups, whose $\F$-normalizers  
 are the *system normalizers* of $G$. The $\F$-normalizers of a group 
 $G$ for a given $\F$ are all conjugate. They cover $\F$-central chief 
 factors and avoid $\F$-hypereccentric ones.
@@ -32,7 +42,7 @@ If <F> is a locally defined integrated formation in {\GAP} and
 returns an <F>-normalizer of <G>. The function `SystemNormalizer' yields a 
 system normalizer of <G>.
 
-The underlying algorithm here requires <G> to have a special pcgs (see SpecialPcgs), so the algorithm's first step is
+The underlying algorithm here requires <G> to have a special pcgs (see section "ref:Polycyclic Groups" in the {\GAP} reference manual), so the algorithm's first step is
  to compute such a pcgs for <G> if one is not known. The complement basis
 $\Sigma$ associated with this pcgs is then used to compute the
 <F>-normalizer of <G> with respect to $\Sigma$. This process means that 
