@@ -8,10 +8,10 @@ SetPackageInfo( rec(
 
 PackageName := "FORMAT",
 Subtitle := "Computing with formations of finite solvable groups.",
-Version := "1.2",
-Date := "02/11/2011",
+Version := "1.3",
+Date := "05/26/2012",
 
-ArchiveURL := "http://www.uoregon.edu/~wright/RESEARCH/format/format-1.2",
+ArchiveURL := "http://www.uoregon.edu/~wright/RESEARCH/format/format-1.3",
 ArchiveFormats := ".tar.gz .tar.bz2",
 
 Persons := [
