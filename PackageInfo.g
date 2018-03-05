@@ -1,102 +1,82 @@
 #############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
+##
+##  PackageInfo file for the FORMAT package.   
+##                                       Bettina Eick and Charles R.B. Wright
 ##
 
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
+PackageName := "FORMAT",
+Subtitle := "Computing with formations of finite solvable groups.",
+Version := "1.3",
+Date := "05/26/2012",
 
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.2",
-Date := "04/02/2017", # dd/mm/yyyy format
+ArchiveURL := "http://www.uoregon.edu/~wright/RESEARCH/format/format-1.3",
+ArchiveFormats := ".tar.gz .tar.bz2",
 
 Persons := [
   rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
-    IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
-  ),
+      LastName      := "Eick",
+      FirstNames    := "Bettina",
+      IsAuthor      := true,
+      IsMaintainer  := true,
+      Email         := "b.eick@tu-bs.de",
+      WWWHome       := "http://www.icm.tu-bs.de/~beick",
+      PostalAddress := Concatenation( [
+                         "Bettina Eick\n",
+                         "Institut Computational Mathematics\n",
+                         "Technische Universit\"at Braunschweig\n",
+                         "Pockelsstr. 14, D-38106 Braunschweig, Germany" ] ),
+      Place         := "Braunschweig",
+      Institution   := "T U Braunschweig"
+    ),
 
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
-  ),
-
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
+      LastName := "Wright",
+      FirstNames := "Charles R.B.",
+      IsAuthor := true,
+      IsMaintainer := true,
+      Email := "wright@math.uoregon.edu",
+      WWWHome := "http://www.uoregon.edu/~wright",
+      Place := "Eugene",
+      Institution := "University of Oregon"
+  )
 ],
 
-Status := "other",
+Status := "accepted",
+CommunicatedBy := "Joachim Neub�ser (Aachen)",
+AcceptDate := "12/2000",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
+README_URL := "http://www.uoregon.edu/~wright/RESEARCH/format/README",
+PackageInfoURL := "http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g",
 
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
+AbstractHTML := "This package provides functions for computing with \
+formations of finite solvable groups.",
 
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
+PackageWWWHome := "http://www.uoregon.edu/~wright/RESEARCH/format/",
 
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
-  ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
-  PDFFile   := "doc/manual.pdf",
-  SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+  BookName := "FORMAT",
+  Archive := Concatenation(~.PackageWWWHome, "format-", ~.Version,
+"tar.gz" ),
+  ArchiveURLSubset := ["doc", "htm"],
+  HTMLStart := "htm/chapters.htm",
+  PDFFile := "doc/manual.pdf",
+  SixFile := "doc/manual.six",
+  LongTitle := "Formations of Finite Soluble Groups",
+  Autoload := true
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
+  GAP := ">=4.5",
+  NeededOtherPackages := [],
+  SuggestedOtherPackages := [],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
 
-Keywords := ["GitHub Pages", "GAP"]
+Keywords := ["formations", "soluble", "group"]
 
 ));
-
 
