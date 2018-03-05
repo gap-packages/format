@@ -3,9 +3,6 @@
 #W  exres.gi                        FORMAT                       Bettina Eick
 #W                                      conversion from GAP3 by C.R.B. Wright 
 ##
-Revision.("format/lib/exres.gi") :=
-    "@(#)$Id: exres.gi,v 1.5 2000/10/31 17:16:29 gap Exp $";
-
 
 #############################################################################
 #M  PResidualOp( <group>, <prime> ). . . . . . . . . . . . . . . . . . O^p(G)

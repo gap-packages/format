@@ -3,8 +3,6 @@
 #W  general.gi                      FORMAT                       Bettina Eick
 #W                                      conversion from GAP3 by C.R.B. Wright
 ##
-Revision.("format/lib/general.gi") :=
-    "@(#)$Id: general.gi,v 1.7 2000/10/31 17:16:29 gap Exp $";
 
 #############################################################################
 #M  PPart( <elt>, <prime> ). . . . . . . . . . . . . . . . . . . . . . .local

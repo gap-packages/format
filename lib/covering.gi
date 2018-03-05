@@ -3,8 +3,6 @@
 #W  covering.gi                     FORMAT                       Bettina Eick
 #W                                      conversion from GAP3 by C.R.B. Wright 
 ##
-Revision.("format/lib/covering.gi") :=
-    "@(#)$Id: covering.gi,v 1.10 2000/10/31 17:58:37 gap Exp $";
 
 ## Both methods exploit the fact that an F-covering subgroup of a pi-Hall 
 ## subgroup of G is an (F meet pi-groups)-covering subgroup of G.

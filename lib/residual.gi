@@ -3,8 +3,6 @@
 #W  residual.gi                     FORMAT                       Bettina Eick
 #W                                      conversion from GAP3 by C.R.B. Wright 
 ##
-Revision.("format/lib/residual.gi") :=
-    "@(#)$Id: residual.gi,v 1.6 2000/10/31 17:16:29 gap Exp $";
 
 #############################################################################
 #M  ResidualFunctionOfFormation( <form> ) . . . . . . . . . . . . . . . . . . ##

@@ -3,8 +3,6 @@
 #W  normalizer.gi                   FORMAT                       Bettina Eick
 #W                                      conversion from GAP3 by C.R.B. Wright 
 ##
-Revision.("format/gap/normalizer.gi") :=
-    "@(#)$Id: normalizer.gi,v 1.8 2000/10/31 17:58:37 gap Exp $";
 
 #############################################################################
 #F  NormalizedPcgs( spg, pcgs ). . . . . . . . sets leading coefficients to 1

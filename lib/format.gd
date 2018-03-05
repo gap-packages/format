@@ -3,8 +3,6 @@
 #W  format.gd                        FORMAT                      Bettina Eick
 #W                                      conversion from GAP3 by C.R.B. Wright 
 ##
-Revision.("format/lib/format.gd") :=
-    "@(#)$Id: format.gd,v 1.5 2000/10/31 17:16:29 gap Exp $";
 
 #############################################################################
 ##
