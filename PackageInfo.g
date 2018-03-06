@@ -17,7 +17,7 @@ Persons := [
       FirstNames    := "Bettina",
       IsAuthor      := true,
       IsMaintainer  := true,
-      Email         := "b.eick@tu-bs.de",
+      Email         := "beick@tu-bs.de",
       WWWHome       := "http://www.icm.tu-bs.de/~beick",
       PostalAddress := Concatenation( [
                          "Bettina Eick\n",
@@ -25,7 +25,7 @@ Persons := [
                          "Technische Universit\"at Braunschweig\n",
                          "Pockelsstr. 14, D-38106 Braunschweig, Germany" ] ),
       Place         := "Braunschweig",
-      Institution   := "T U Braunschweig"
+      Institution   := "TU Braunschweig"
     ),
 
   rec(
