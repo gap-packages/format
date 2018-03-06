@@ -5,13 +5,6 @@
 
 #############################################################################
 ##
-#D Declare the package
-##
-# DeclarePackage( "format", "1.1", ReturnTrue );
-# DeclarePackageDocumentation( "format", "doc" );
-
-#############################################################################
-##
 #D Read .gd file
 ##
 ReadPackage( "format/lib/format.gd");
