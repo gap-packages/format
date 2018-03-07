@@ -81,6 +81,8 @@ Dependencies := rec(
 
 AvailabilityTest := ReturnTrue,
 
+TestFile := "tst/testall.g",
+
 Keywords := ["formations", "soluble", "group"]
 
 ));
