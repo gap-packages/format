@@ -29,9 +29,9 @@ end);
 ##
 InstallMethod(PrintObj, "for a formation", true, [ IsFormation ], 0,
 function( form )
-Print("formation of ", NameOfFormation(form), " groups ");
+Print("formation of ", NameOfFormation(form), " groups");
 if HasSupportOfFormation(form) and not ("Changed" = NameOfFormation(form){[1..7]}) then
-  Print("with support ", SupportOfFormation(form));
+  Print(" with support ", SupportOfFormation(form));
 fi;
 end);
 
