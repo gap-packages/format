@@ -14,7 +14,9 @@ DeclareInfoClass( "InfoForm" );
 #############################################################################
 #C IsFormation
 ##
-DeclareCategory("IsFormation", IsObject);
+## We cheat a bit and claims that formations are collections, so that it
+## becomes possible to use Intersection on them
+DeclareCategory("IsFormation", IsCollection);
 
 #############################################################################
 #R IsFormationRep( <rep> )
