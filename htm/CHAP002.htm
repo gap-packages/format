@@ -3,36 +3,36 @@
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP001.htm">Previous</a>] [<a href ="CHAP003.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <h1>2 Formations in GAP</h1><p>
 <p>
-A <strong>formation</strong> is a class <var><font face="helvetica,arial">F</font></var> of groups closed under taking epimorphic
-images and subdirect products. Closure under subdirect products is equivalent to the property that each finite group <var>G</var>  has a unique 
-smallest normal subgroup <var>G<sup><font face="helvetica,arial">F</font></sup></var> with factor group <var>G / G<sup><font face="helvetica,arial">F</font></sup></var> in&nbsp;<var><font face="helvetica,arial">F</font></var>. 
-The subgroup <var>G<sup><font face="helvetica,arial">F</font></sup></var> is called the <strong><var><font face="helvetica,arial">F</font></var>-residual</strong> subgroup of <var>G</var>. Thus, 
-for example, the derived subgroup of <var>G</var> is its residual for the formation 
+A <strong>formation</strong> is a class <b>F</b> of groups closed under taking epimorphic
+images and subdirect products. Closure under subdirect products is equivalent to the property that each finite group <i>G</i>  has a unique 
+smallest normal subgroup <i>G</i><sup><b>F</b></sup> with factor group <i>G</i> / <i>G</i><sup><b>F</b></sup> in&nbsp;<b>F</b>. 
+The subgroup <i>G</i><sup><b>F</b></sup> is called the <strong><b>F</b>-residual</strong> subgroup of <i>G</i>. Thus, 
+for example, the derived subgroup of <i>G</i> is its residual for the formation 
 of abelian groups, and the residual for the formation of nilpotent groups 
 is the last term of the descending central series. 
 <p>
-In <font face="Gill Sans,Helvetica,Arial">FORMAT</font> a formation is described by a function that computes <var>G<sup><font face="helvetica,arial">F</font></sup></var> 
-for each (finite solvable) group <var>G</var>, and from that perspective <var><font face="helvetica,arial">F</font></var> 
-consists of the groups <var>G</var> for which <var>G<sup><font face="helvetica,arial">F</font></sup></var> is trivial. To define a 
+In <font face="Gill Sans,Helvetica,Arial">FORMAT</font> a formation is described by a function that computes <i>G</i><sup><b>F</b></sup> 
+for each (finite solvable) group <i>G</i>, and from that perspective <b>F</b> 
+consists of the groups <i>G</i> for which <i>G</i><sup><b>F</b></sup> is trivial. To define a 
 formation that is not one of the standard examples provided (see below), 
 one must give <font face="Gill Sans,Helvetica,Arial">GAP</font> an identifier for the formation and also some method 
 for computing residual subgroups. 
 <p>
-Some of the most interesting formations can also be described by ``local definition.'' For each prime <var>p</var> 
-let <var><font face="helvetica,arial">F</font>(p)</var> be a formation or the empty class, and let <var><font face="helvetica,arial">F</font></var> be the class 
-of all finite solvable groups <var>G</var> such that for each prime <var>p</var> and each <var>p</var>-chief factor <var>H/K</var> of <var>G</var> the group of automorphisms that <var>G</var> 
-induces on <var>H/K</var> by conjugation belongs to <var><font face="helvetica,arial">F</font>(p)</var>. Then <var><font face="helvetica,arial">F</font></var> is a 
-formation,  with  <strong>local definition</strong>  the set of <var> <font face="helvetica,arial">F</font>(p)</var>s. 
-The set of primes <var>p</var> for which <var><font face="helvetica,arial">F</font>(p)</var> is not empty is called the 
-<strong>support</strong> of&nbsp;<var><font face="helvetica,arial">F</font></var>. A <var>p</var>-chief factor is <strong><var><font face="helvetica,arial">F</font></var>-central</strong> in case <var>G</var>
-induces an <var><font face="helvetica,arial">F</font>(p)</var>-group on it or, equivalently, in case <var>G<sup><font face="helvetica,arial">F</font>(p)</sup></var>
+Some of the most interesting formations can also be described by ``local definition.'' For each prime <i>p</i> 
+let <b>F</b>(<i>p</i>) be a formation or the empty class, and let <b>F</b> be the class 
+of all finite solvable groups <i>G</i> such that for each prime <i>p</i> and each <i>p</i>-chief factor <i>H</i>/<i>K</i> of <i>G</i> the group of automorphisms that <i>G</i> 
+induces on <i>H</i>/<i>K</i> by conjugation belongs to <b>F</b>(<i>p</i>). Then <b>F</b> is a 
+formation,  with  <strong>local definition</strong>  the set of  <b>F</b>(<i>p</i>)s. 
+The set of primes <i>p</i> for which <b>F</b>(<i>p</i>) is not empty is called the 
+<strong>support</strong> of&nbsp;<b>F</b>. A <i>p</i>-chief factor is <strong><b>F</b>-central</strong> in case <i>G</i>
+induces an <b>F</b>(<i>p</i>)-group on it or, equivalently, in case <i>G</i><sup><b>F</b>(<i>p</i>)</sup>
 centralizes it. It is possible to define a formation in <font face="Gill Sans,Helvetica,Arial">FORMAT</font> by
 giving such a local definition. Indeed one can define a kind of
 generalized formation by giving what is called a normal subgroup function 
 or <strong>screen</strong>, which specifies arbitrary normal subgroups, not necessarily 
-of form <var>G<sup><font face="helvetica,arial">F</font>(p)</sup></var>, to test ``centrality.'' Section&nbsp;<a href="CHAP007.htm">Other Applications</a> describes one such usage of general screens. Most applications of formation 
+of form <i>G</i><sup><b>F</b>(<i>p</i>)</sup>, to test ``centrality.'' Section&nbsp;<a href="CHAP007.htm">Other Applications</a> describes one such usage of general screens. Most applications of formation 
 theory to solvable groups require local definition, as do the <font face="Gill Sans,Helvetica,Arial">GAP</font> 
-functions for computing <var><font face="helvetica,arial">F</font></var>-normalizers and <var><font face="helvetica,arial">F</font></var>-covering subgroups. 
+functions for computing <b>F</b>-normalizers and <b>F</b>-covering subgroups. 
 <p>
 <a name = ""></a>
 <li><code>Formation( </code><var>rec</var><code> ) O</code>
@@ -60,14 +60,14 @@ provided are:
 <p>
 <dt><code>Formation( "ElementaryAbelianProduct" )</code> <dd> The formation of direct products of elementary abelian groups,
 <p>
-<dt><code>Formation( "PNilpotent", prime )</code> <dd> The formation of <var>p</var>-nilpotent groups 
-for <var>p =</var> <code>prime</code>,
+<dt><code>Formation( "PNilpotent", prime )</code> <dd> The formation of <i>p</i>-nilpotent groups 
+for <i>p</i> =  <code>prime</code>,
 <p>
-<dt><code>Formation( "PiGroups", primes )</code> <dd> The formation of <var>pi</var>-groups for 
-<var>pi=</var> the set <code>primes</code>,
+<dt><code>Formation( "PiGroups", primes )</code> <dd> The formation of &#960;-groups for 
+&#960; =  the set <code>primes</code>,
 <p>
-<dt><code>Formation( "PLengthOne", prime )</code> <dd> The formation of groups of <var>p</var>-length 1 
-for <var>p =</var> <code>prime</code>.
+<dt><code>Formation( "PLengthOne", prime )</code> <dd> The formation of groups of <i>p</i>-length 1 
+for <i>p</i> =  <code>prime</code>.
 </dl>
 <p>
 <a name = ""></a>
@@ -84,9 +84,9 @@ returns the  residual function of a formation.
 <a name = ""></a>
 <li><code>ScreenOfFormation( </code><var>F</var><code> ) A</code>
 <p>
-If <var>F</var> is locally defined by some screen of <var><font face="helvetica,arial">F</font>(p)</var>s, 
+If <var>F</var> is locally defined by some screen of <b>F</b>(<i>p</i>)s, 
 then <code>HasScreenOfFormation( </code><var>F</var><code> )</code> is <code>true</code>, <code>ScreenOfFormation( </code><var>F</var><code> )</code> is a function of two variables, <var>group</var> and <var>prime</var>, and 
-<code>ScreenOfFormation( </code><var>F</var><code> )(  </code><var>G</var><code>, </code><var>p</var><code> )</code> returns <var>G<sup>F(p)</sup></var> if <var>p</var> is
+<code>ScreenOfFormation( </code><var>F</var><code> )(  </code><var>G</var><code>, </code><var>p</var><code> )</code> returns <i>G</i><sup><i>F</i>(<i>p</i>)</sup> if <var>p</var> is
 in the support of <var>F</var> and  gives the empty list otherwise. 
 <p>
 <a name = ""></a>
@@ -113,8 +113,8 @@ of the support of <var>F</var> and <var>primes</var>.
 <a name = ""></a>
 <li><code>IsIntegrated( </code><var>F</var><code> ) P</code>
 <p>
-The local definition  is called <strong>integrated</strong> in case <var><font face="helvetica,arial">F</font>(p)</var> is contained in
-<var><font face="helvetica,arial">F</font></var>  for each  prime&nbsp;<var>p</var>. The optional property <code>IsIntegrated</code> makes sense only if <code>HasScreenOfFormation( </code><var>F</var><code> )</code> is <code>true</code>. Notice that
+The local definition  is called <strong>integrated</strong> in case <b>F</b>(<i>p</i>) is contained in
+<b>F</b>  for each  prime&nbsp;<i>p</i>. The optional property <code>IsIntegrated</code> makes sense only if <code>HasScreenOfFormation( </code><var>F</var><code> )</code> is <code>true</code>. Notice that
 some of the functions described below will require that all of the attributes <code>HasScreenOfFormation(
 </code><var>F</var><code> )</code>, <code>HasIsIntegrated( </code><var>F</var><code> )</code> and <code>IsIntegrated( </code><var>F</var><code> )</code> are <code>true</code>. If
 unbound, this property can be bound with <code>SetIsIntegrated</code>, but it is up to the
@@ -126,7 +126,7 @@ Section <a href="CHAP006.htm">Formation Examples</a> contains an example of such
 <p>
 A local definition of a formation may always be replaced by an
 integrated one without changing the formation itself, though the meaning
-of <var><font face="helvetica,arial">F</font></var>-central may change.  Let <var>F</var> be a locally defined <font face="Gill Sans,Helvetica,Arial">GAP</font> formation with
+of <b>F</b>-central may change.  Let <var>F</var> be a locally defined <font face="Gill Sans,Helvetica,Arial">GAP</font> formation with
 name <code></code><var>name</var><code></code>.  If <var>F</var> is already integrated, then <code>Integrated( </code><var>F</var><code> )</code> 
 yields <var>F</var> itself. Otherwise, it yields a  formation <code></code><var>name</var><code>Int</code> that is
 abstractly the same as <var>F</var> but has integrated local definition.
@@ -154,8 +154,8 @@ integrated if both are.
 <li><code>ProductOfFormations( </code><var>F1</var><code>, </code><var>F2</var><code> ) O</code>
 <p>
 The product of two  formations <var>F1</var> and <var>F2</var> is the formation <var>F</var>
-such that a finite group <var>G</var> is a member of <var>F</var> if and only if
-<var>G<sup>F2</sup></var> is in <var>F1</var>. (Notice that the product of <var>F1</var> by <var>F2</var> is 
+such that a finite group <i>G</i> is a member of <var>F</var> if and only if
+<i>G</i><sup><i>F</i>2</sup> is in <var>F1</var>. (Notice that the product of <var>F1</var> by <var>F2</var> is 
 not necessarily equal to the product of <var>F2</var> by <var>F1</var>, and unless <var>F1</var> is normal subgroup-closed the product need not contain all extensions of a group in <var>F1</var> by a group in <var>F2</var>.) The function 
 <code>ProductOfFormations( </code><var>F1</var><code>, </code><var>F2</var><code> )</code> yields the product <code>(</code><var>name1</var><code>By</code><var>name2</var><code>)</code> of the two  
 formations. The product has the attribute <code>ResidualFunctionOfFormation</code> and has

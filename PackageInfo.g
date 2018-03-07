@@ -8,11 +8,8 @@ SetPackageInfo( rec(
 
 PackageName := "FORMAT",
 Subtitle := "Computing with formations of finite solvable groups.",
-Version := "1.3",
-Date := "05/26/2012",
-
-ArchiveURL := "http://www.uoregon.edu/~wright/RESEARCH/format/format-1.3",
-ArchiveFormats := ".tar.gz .tar.bz2",
+Version := "1.4",
+Date := "08/03/2018",
 
 Persons := [
   rec(
@@ -20,7 +17,7 @@ Persons := [
       FirstNames    := "Bettina",
       IsAuthor      := true,
       IsMaintainer  := true,
-      Email         := "b.eick@tu-bs.de",
+      Email         := "beick@tu-bs.de",
       WWWHome       := "http://www.icm.tu-bs.de/~beick",
       PostalAddress := Concatenation( [
                          "Bettina Eick\n",
@@ -28,14 +25,14 @@ Persons := [
                          "Technische Universit\"at Braunschweig\n",
                          "Pockelsstr. 14, D-38106 Braunschweig, Germany" ] ),
       Place         := "Braunschweig",
-      Institution   := "T U Braunschweig"
+      Institution   := "TU Braunschweig"
     ),
 
   rec(
       LastName := "Wright",
       FirstNames := "Charles R.B.",
       IsAuthor := true,
-      IsMaintainer := true,
+      IsMaintainer := false,
       Email := "wright@math.uoregon.edu",
       WWWHome := "http://www.uoregon.edu/~wright",
       Place := "Eugene",
@@ -44,16 +41,24 @@ Persons := [
 ],
 
 Status := "accepted",
-CommunicatedBy := "Joachim Neubüser (Aachen)",
+CommunicatedBy := "Joachim Neub√ºser (Aachen)",
 AcceptDate := "12/2000",
 
-README_URL := "http://www.uoregon.edu/~wright/RESEARCH/format/README",
-PackageInfoURL := "http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g",
+PackageWWWHome  := "https://gap-packages.github.io/format/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/format",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/format-", ~.Version ),
+ArchiveFormats := ".tar.gz",
 
 AbstractHTML := "This package provides functions for computing with \
 formations of finite solvable groups.",
-
-PackageWWWHome := "http://www.uoregon.edu/~wright/RESEARCH/format/",
 
 PackageDoc := rec(
   BookName := "FORMAT",
@@ -75,6 +80,8 @@ Dependencies := rec(
 ),
 
 AvailabilityTest := ReturnTrue,
+
+TestFile := "tst/testall.g",
 
 Keywords := ["formations", "soluble", "group"]
 

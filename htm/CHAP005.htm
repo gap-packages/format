@@ -3,24 +3,24 @@
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP004.htm">Previous</a>] [<a href ="CHAP006.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <h1>5 Covering Subgroups</h1><p>
 <p>
-Let <var><font face="helvetica,arial">X</font></var> be a collection of groups closed under taking homomorphic images.
-An <strong><var><font face="helvetica,arial">X</font></var>-covering subgroup</strong> of a group <var>G</var> is a subgroup <var>E</var> satisfying
+Let \X be a collection of groups closed under taking homomorphic images.
+An <strong>\X-covering subgroup</strong> of a group <i>G</i> is a subgroup <i>E</i> satisfying
 <p>
 
 (C)    E is in X , and EV = U whenever E is contained in U is contained in G with U/V in X.
 <p>
-It follows from the definition that an <var><font face="helvetica,arial">X</font></var>-covering subgroup <var>E</var> of <var>G</var> is
-also <var><font face="helvetica,arial">X</font></var>-covering in every subgroup <var>U</var> of <var>G</var> that contains <var>E</var>, and an
-easy argument shows that <var>E</var> is an <strong><var><font face="helvetica,arial">X</font></var>-projector</strong> of every such <var>U</var>,
-i.e., <var>E</var> satisfies
+It follows from the definition that an \X-covering subgroup <i>E</i> of <i>G</i> is
+also \X-covering in every subgroup <i>U</i> of <i>G</i> that contains <i>E</i>, and an
+easy argument shows that <i>E</i> is an <strong>\X-projector</strong> of every such <i>U</i>,
+i.e., <i>E</i> satisfies
 <p>
-(P) &nbsp;&nbsp;<var>EK/K</var> is an <var><font face="helvetica,arial">X</font></var>-maximal subgroup of <var>U/K</var> whenever <var>K</var> is
-normal in <var>U</var>.
+(P) &nbsp;&nbsp;<i>EK</i>/<i>K</i> is an \X-maximal subgroup of <i>U</i>/<i>K</i> whenever <i>K</i> is
+normal in <i>U</i>.
 <p>
-Gasch&uuml;tz showed that if <var><font face="helvetica,arial">F</font></var> is a locally defined formation,
-then every finite solvable group has an <var><font face="helvetica,arial">F</font></var>-covering subgroup. Indeed,
+Gasch&uuml;tz showed that if <b>F</b> is a locally defined formation,
+then every finite solvable group has an <b>F</b>-covering subgroup. Indeed,
 locally defined formations are the only formations with this property. For
-such formations the <var><font face="helvetica,arial">F</font></var>-projectors and <var><font face="helvetica,arial">F</font></var>-covering subgroups of a
+such formations the <b>F</b>-projectors and <b>F</b>-covering subgroups of a
 solvable group coincide and form a single conjugacy class of subgroups.
 (See <a href="biblio.htm#DH"><cite>DH</cite></a> for details.)
 <p>
@@ -35,7 +35,7 @@ If <var>F</var> is a locally defined integrated formation in <font face="Gill Sa
 a finite solvable group, then the command <code>CoveringSubgroup1( </code><var>G</var><code>, </code><var>F</var><code> )</code>
 returns an <var>F</var>-covering subgroup of <var>G</var>.
 The function <code>CoveringSubgroup2</code> uses a different algorithm to compute
-<var><font face="helvetica,arial">F</font></var>-covering subgroups. The user may choose either function. Experiments with large groups suggest that <code>CoveringSubgroup1</code> is somewhat faster.
+<b>F</b>-covering subgroups. The user may choose either function. Experiments with large groups suggest that <code>CoveringSubgroup1</code> is somewhat faster.
 <code>CoveringSubgroupWrtFormation</code> checks first to see if either of these
 two functions has already computed an <var>F</var>-covering subgroup of <var>G</var> and, if
 not, it  calls <code>FCoveringGroup1</code> to compute one. 
@@ -50,7 +50,7 @@ The command <code>CarterSubgroup( </code><var>G</var><code> )</code> is equivale
 <code>CoveringSubgroupWrtFormation( </code><var>G</var><code>, Formation( "Nilpotent" ) )</code>.
 <p>
 <p>
-All of these functions call upon <var><font face="helvetica,arial">F</font></var>-normalizer algorithms as subroutines.
+All of these functions call upon <b>F</b>-normalizer algorithms as subroutines.
 <p>
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP004.htm">Previous</a>] [<a href ="CHAP006.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <P>

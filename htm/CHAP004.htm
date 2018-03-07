@@ -3,22 +3,22 @@
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP003.htm">Previous</a>] [<a href ="CHAP005.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <h1>4 FNormalizers</h1><p>
 <p>
-Let <var><font face="helvetica,arial">F</font></var> be an integrated locally defined formation, and let <var>G</var> be 
+Let <b>F</b> be an integrated locally defined formation, and let <i>G</i> be 
 a finite solvable group with Sylow complement basis 
 
 $\Sigma$.
-Let <var>pi</var> be the set of prime
-divisors of the order of <var>G</var> that are in the support of <var><font face="helvetica,arial">F</font></var> and 
-<var>nu</var> the remaining prime divisors of the order  of <var>G</var>. 
-Then the <strong><var><font face="helvetica,arial">F</font></var>-normalizer</strong> of <var>G</var> with respect to <var>Sigma</var> is defined 
+Let &#960; be the set of prime
+divisors of the order of <i>G</i> that are in the support of <b>F</b> and 
+&#957; the remaining prime divisors of the order  of <i>G</i>. 
+Then the <strong><b>F</b>-normalizer</strong> of <i>G</i> with respect to &#931; is defined 
 to be
 
 [see the PDF manual].
-The special case <var><font face="helvetica,arial">F</font>(p) = { 1 }</var> for all <var>p</var> defines the formation 
-of nilpotent groups, whose <var><font face="helvetica,arial">F</font></var>-normalizers  
-are the <strong>system normalizers</strong> of <var>G</var>. The <var><font face="helvetica,arial">F</font></var>-normalizers of a group 
-<var>G</var> for a given <var><font face="helvetica,arial">F</font></var> are all conjugate. They cover <var><font face="helvetica,arial">F</font></var>-central chief 
-factors and avoid <var><font face="helvetica,arial">F</font></var>-hypereccentric ones.
+The special case <b>F</b>(<i>p</i>) = { 1 } for all <i>p</i> defines the formation 
+of nilpotent groups, whose <b>F</b>-normalizers  
+are the <strong>system normalizers</strong> of <i>G</i>. The <b>F</b>-normalizers of a group 
+<i>G</i> for a given <b>F</b> are all conjugate. They cover <b>F</b>-central chief 
+factors and avoid <b>F</b>-hypereccentric ones.
 <p>
 <a name = ""></a>
 <li><code>FNormalizerWrtFormation( </code><var>G</var><code>, </code><var>F</var><code> ) O</code>
@@ -30,10 +30,10 @@ If <var>F</var> is a locally defined integrated formation in <font face="Gill Sa
 returns an <var>F</var>-normalizer of <var>G</var>. The function <code>SystemNormalizer</code> yields a 
 system normalizer of <var>G</var>.
 <p>
-The underlying algorithm here requires <var>G</var> to have a special pcgs (see section <a href="../../../doc/ref/chap45.html#X86007B0083F60470">Polycyclic Groups</a> in the <font face="Gill Sans,Helvetica,Arial">GAP</font> reference manual), so the algorithm's first step is
+The underlying algorithm here requires <var>G</var> to have a special pcgs (see section <a href="https://www.gap-system.org/Manuals/doc/ref/chap45.html#X86007B0083F60470">Polycyclic Groups</a> in the <font face="Gill Sans,Helvetica,Arial">GAP</font> reference manual), so the algorithm's first step is
  to compute such a pcgs for <var>G</var> if one is not known. The complement basis
-<var>Sigma</var> associated with this pcgs is then used to compute the
-<var>F</var>-normalizer of <var>G</var> with respect to <var>Sigma</var>. This process means that 
+&#931; associated with this pcgs is then used to compute the
+<var>F</var>-normalizer of <var>G</var> with respect to &#931;. This process means that 
 in the case of a finite solvable group <var>G</var> that does not have a special pcgs, 
 the first call of <code>FNormalizerWrtFormation</code> (or similarly of <code>FormationCoveringGroup</code>) 
 will  take longer than subsequent calls, since it will include the
@@ -43,7 +43,7 @@ The <code>FNormalizerWrtFormation</code> algorithm next computes an <var>F</var>
 complicated record that includes a pcgs corresponding to a normal series 
 of <var>G</var> whose factors are either <var>F</var>-central or <var>F</var>-hypereccentric. A subset 
 of this pcgs then exhibits the <var>F</var>-normalizer of <var>G</var> determined by
-<var>Sigma</var>. The list <code>ComputedFNormalizerWrtFormations( </code><var>G</var><code> )</code> stores the <var>F</var>-normalizers
+&#931;. The list <code>ComputedFNormalizerWrtFormations( </code><var>G</var><code> )</code> stores the <var>F</var>-normalizers
 of <var>G</var> that have been found for various formations <var>F</var>.  
 <p>
 The <code>FNormalizerWrtFormation</code> function can be used to study the subgroups of a 
