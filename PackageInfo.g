@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
 PackageName := "FORMAT",
 Subtitle := "Computing with formations of finite solvable groups.",
-Version := "1.4",
-Date := "08/03/2018",
+Version := "1.4a",
+Date := "19/03/2018",
 
 Persons := [
   rec(
@@ -33,7 +33,7 @@ Persons := [
       FirstNames := "Charles R.B.",
       IsAuthor := true,
       IsMaintainer := false,
-      Email := "wright@math.uoregon.edu",
+      Email := "wright@uoregon.edu",
       WWWHome := "http://www.uoregon.edu/~wright",
       Place := "Eugene",
       Institution := "University of Oregon"
