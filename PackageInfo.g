@@ -62,8 +62,6 @@ formations of finite solvable groups.",
 
 PackageDoc := rec(
   BookName := "FORMAT",
-  Archive := Concatenation(~.PackageWWWHome, "format-", ~.Version,
-"tar.gz" ),
   ArchiveURLSubset := ["doc", "htm"],
   HTMLStart := "htm/chapters.htm",
   PDFFile := "doc/manual.pdf",
