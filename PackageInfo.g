@@ -8,8 +8,9 @@ SetPackageInfo( rec(
 
 PackageName := "FORMAT",
 Subtitle := "Computing with formations of finite solvable groups.",
-Version := "1.4a",
-Date := "19/03/2018",
+Version := "1.4.1",
+Date := "15/03/2019", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 
 Persons := [
   rec(
@@ -62,8 +63,6 @@ formations of finite solvable groups.",
 
 PackageDoc := rec(
   BookName := "FORMAT",
-  Archive := Concatenation(~.PackageWWWHome, "format-", ~.Version,
-"tar.gz" ),
   ArchiveURLSubset := ["doc", "htm"],
   HTMLStart := "htm/chapters.htm",
   PDFFile := "doc/manual.pdf",
