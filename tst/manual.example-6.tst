@@ -83,12 +83,8 @@ gap> ComputedCoveringSubgroup1s(G);
 [ formation of (2NilpotentByAbelian)Int groups, Group([ (3,4), (2,4,3) ]), 
   formation of Nilpotent groups, Group([ (3,4), (1,3)(2,4), (1,2)(3,4) ]), 
   formation of Supersolvable groups, Group([ (3,4), (2,4,3) ]) ]
-gap> ComputedResidualWrtFormations(G);
-[ formation of (2NilpotentByAbelian) groups, Group([ (1,4)(2,3), (1,2)
-  (3,4) ]), formation of (AbelianBy2Nilpotent) groups, Group(()), 
-  formation of 2Nilpotent groups, Group([ (1,2)(3,4), (1,3)(2,4) ]), 
-  formation of Abelian groups, Alt( [ 1 .. 4 ] ), 
-  formation of Supersolvable groups, Group([ (1,4)(2,3), (1,2)(3,4) ]) ]
+gap> Length(ComputedResidualWrtFormations(G));
+10
 gap> pig := Formation("PiGroups", [2,5]);
 formation of (2,5)-Group groups with support [ 2, 5 ]
 gap> form := Intersection(pig, nil2);
