@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
 PackageName := "FORMAT",
 Subtitle := "Computing with formations of finite solvable groups.",
-Version := "1.4.1",
-Date := "15/03/2019", # dd/mm/yyyy format
+Version := "1.4.2",
+Date := "03/09/2019", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
