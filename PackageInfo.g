@@ -46,7 +46,7 @@ CommunicatedBy := "Joachim Neubüser (Aachen)",
 AcceptDate := "12/2000",
 
 PackageWWWHome  := "https://gap-packages.github.io/format/",
-README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+README_URL      := Concatenation( ~.PackageWWWHome, "README.md" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 SourceRepository := rec(
     Type := "git",
