@@ -38,7 +38,15 @@ Persons := [
       WWWHome := "http://www.uoregon.edu/~wright",
       Place := "Eugene",
       Institution := "University of Oregon"
-  )
+  ),
+
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
 ],
 
 Status := "accepted",
