@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
 PackageName := "FORMAT",
 Subtitle := "Computing with formations of finite solvable groups.",
-Version := "1.4.1",
-Date := "15/03/2019", # dd/mm/yyyy format
+Version := "1.4.2",
+Date := "03/09/2019", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -38,7 +38,15 @@ Persons := [
       WWWHome := "http://www.uoregon.edu/~wright",
       Place := "Eugene",
       Institution := "University of Oregon"
-  )
+  ),
+
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
 ],
 
 Status := "accepted",
@@ -46,7 +54,7 @@ CommunicatedBy := "Joachim Neubüser (Aachen)",
 AcceptDate := "12/2000",
 
 PackageWWWHome  := "https://gap-packages.github.io/format/",
-README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+README_URL      := Concatenation( ~.PackageWWWHome, "README.md" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 SourceRepository := rec(
     Type := "git",

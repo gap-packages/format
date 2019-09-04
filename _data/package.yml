@@ -1,6 +1,6 @@
 name: FORMAT
-version: 1.4.1
-date: 2019-03-15
+version: 1.4.2
+date: 2019-09-03
 description: |
     Computing with formations of finite solvable groups.
 
@@ -13,16 +13,18 @@ authors:
 maintainers:
     - name: Bettina Eick
       url: http://www.icm.tu-bs.de/~beick
+    - name: The GAP Team
+      url: mailto:support@gap-system.org
 
 GAP: ">=4.5"
 
 www: https://gap-packages.github.io/format/
-readme: README
+readme: README.md
 packageinfo: https://gap-packages.github.io/format/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/format/releases/download/v1.4.1/format-1.4.1.tar.gz
+      url: https://github.com/gap-packages/format/releases/download/v1.4.2/format-1.4.2.tar.gz
 
 abstract: |
     This package provides functions for computing with formations of finite solvable groups.
