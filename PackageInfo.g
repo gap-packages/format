@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
 PackageName := "FORMAT",
 Subtitle := "Computing with formations of finite solvable groups.",
-Version := "1.4.2",
-Date := "03/09/2019", # dd/mm/yyyy format
+Version := "1.4.3",
+Date := "11/10/2019", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -19,12 +19,13 @@ Persons := [
       IsAuthor      := true,
       IsMaintainer  := true,
       Email         := "beick@tu-bs.de",
-      WWWHome       := "http://www.icm.tu-bs.de/~beick",
-      PostalAddress := Concatenation( [
-                         "Bettina Eick\n",
-                         "Institut Computational Mathematics\n",
-                         "Technische Universit\"at Braunschweig\n",
-                         "Pockelsstr. 14, D-38106 Braunschweig, Germany" ] ),
+      WWWHome       := "http://www.iaa.tu-bs.de/beick",
+      PostalAddress := Concatenation(
+               "Institut Analysis und Algebra\n",
+               "TU Braunschweig\n",
+               "Universitätsplatz 2\n",
+               "D-38106 Braunschweig\n",
+               "Germany" ),
       Place         := "Braunschweig",
       Institution   := "TU Braunschweig"
     ),
