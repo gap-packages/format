@@ -36,7 +36,7 @@ Persons := [
       IsAuthor := true,
       IsMaintainer := false,
       Email := "wright@uoregon.edu",
-      WWWHome := "http://www.uoregon.edu/~wright",
+      WWWHome := "https://pages.uoregon.edu/wright/",
       Place := "Eugene",
       Institution := "University of Oregon"
   ),
