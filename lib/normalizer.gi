@@ -114,7 +114,7 @@ function ( system, pcgsR, i )
   size   := next - first;
   gensNM := system.base{[first..next-1]};
 
-  # initialize inhomogenous system  
+  # initialize inhomogeneous system  
   V := [ ];
   E := List( [ 1 .. size ], x -> [ ] );
 
@@ -146,7 +146,7 @@ function ( system, pcgsR, i )
     fi;
   od;
 
-  # try to solve inhomogenous systems simultaneously
+  # try to solve inhomogeneous systems simultaneously
   solution := SolutionMat( E, V );
 
   # calculate new i-th base element
