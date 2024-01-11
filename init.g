@@ -7,5 +7,5 @@
 ##
 #D Read .gd file
 ##
-ReadPackage( "format/lib/format.gd");
+ReadPackage( "format", "lib/format.gd");
 
