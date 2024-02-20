@@ -1,5 +1,6 @@
 name: FORMAT
-version: 1.4.4
+version: "1.4.4"
+license: "GPL-2.0-or-later"
 date: 2024-01-09
 description: |
     Computing with formations of finite solvable groups.
@@ -32,3 +33,31 @@ abstract: |
 status: accepted
 doc-html: htm/chapters.htm
 doc-pdf: doc/manual.pdf
+keywords: |
+    formations, soluble, group.
+citeas: |
+    <p class='BibEntry'>
+    [<span class='BibKey'>EWT24</span>]   <b class='BibAuthor'>Eick, B., Wright, C. R. and GAP Team, T.</b>,
+     <i class='BibTitle'>FORMAT, Computing with formations of finite solvable groups.,
+             Version 1.4.4</i>
+     (<span class='BibYear'>2024</span>)<br />
+    (<span class='BibNote'>Refereed GAP package</span>),
+    <span class='BibHowpublished'><a href="https://gap-packages.github.io/format/">https://gap-packages.github.io/format/</a></span>.
+    </p>
+    
+
+bibtex: |
+    @misc{ FORMAT1.4.4,
+      author =           {Eick, B. and Wright, C. R. and GAP Team, T.},
+      title =            {{FORMAT}, Computing with formations of finite solvable
+                          groups., {V}ersion 1.4.4},
+      month =            {Jan},
+      year =             {2024},
+      note =             {Refereed GAP package},
+      howpublished =     {\href         {https://gap-packages.github.io/format/}
+                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {}{}{}\texttt{format/}}},
+      keywords =         {formations; soluble; group},
+      printedkey =       {EWT24}
+    }
+
