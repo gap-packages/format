@@ -77,7 +77,6 @@ PackageDoc := rec(
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Formations of Finite Soluble Groups",
-  Autoload := true
 ),
 
 Dependencies := rec(
