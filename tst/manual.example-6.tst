@@ -69,7 +69,7 @@ gap> KnownAttributesOfObject(form2);
 [ "NameOfFormation", "ScreenOfFormation", "ResidualFunctionOfFormation" ]
 gap> ResidualWrtFormation(G, form);  ResidualWrtFormation(G, form2);
 Group(())
-Group([ (1,4)(2,3), (1,2)(3,4) ])
+Group([ (1,2)(3,4), (1,3)(2,4) ])
 gap> KnownPropertiesOfObject(form2);
 [  ]
 gap> Integrated(form2);
@@ -115,7 +115,7 @@ gap> KnownAttributesOfObject(form); KnownPropertiesOfObject(form);
 [  ]
 gap> SetIsIntegrated(form, true);
 gap> ResidualWrtFormation(G, form);
-Group([ (1,4)(2,3), (1,2)(3,4) ])
+Group([ (1,2)(3,4), (1,3)(2,4) ])
 gap> FNormalizerWrtFormation(G, form);
 Group([ (3,4), (2,4,3) ])
 gap> CoveringSubgroup1(G, form);
