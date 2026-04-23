@@ -100,7 +100,7 @@ The call by `CoveringSubgroupWrtFormation' was to `CoveringSubgroup1', not
 
 We could also have started with a pc group or a nice enough matrix group.
 \beginexample
-gap> s4 := SmallGroup(IdGroup(G));
+gap> s4 := SymmetricGroup(IsPcGroup, 4);
 <pc group of size 24 with 4 generators>
 \endexample
 This is $S_4$ again. The answers just look different now.
@@ -113,7 +113,7 @@ Similarly, we have $SL(2,3)$ and an isomorphic pc group.
 \beginexample
 gap> sl := SpecialLinearGroup(2,3);
 SL(2,3)
-gap> h := SmallGroup(IdGroup(sl));
+gap> h := PcGroupWithPcgs(Pcgs(sl));
 <pc group of size 24 with 4 generators>
 \endexample
 We get the following subgroups.

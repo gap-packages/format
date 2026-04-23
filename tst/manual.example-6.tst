@@ -34,14 +34,14 @@ gap> ComputedCoveringSubgroup2s(G);
 gap> ComputedCoveringSubgroup1s(G);
 [ formation of Nilpotent groups, Group([ (3,4), (1,3)(2,4), (1,2)(3,4) ]), 
   formation of Supersolvable groups, Group([ (3,4), (2,4,3) ]) ]
-gap> s4 := SmallGroup(IdGroup(G));
+gap> s4 := SymmetricGroup(IsPcGroup, 4);
 <pc group of size 24 with 4 generators>
 gap> SystemNormalizer(s4); CarterSubgroup(s4);
 Group([ f1 ])
 Group([ f1, f4, f3*f4 ])
 gap> sl := SpecialLinearGroup(2,3);
 SL(2,3)
-gap> h := SmallGroup(IdGroup(sl));
+gap> h := PcGroupWithPcgs(Pcgs(sl));
 <pc group of size 24 with 4 generators>
 gap> CarterSubgroup(sl); Size(last);
 <group of 2x2 matrices over GF(3)>
