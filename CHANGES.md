@@ -1,5 +1,9 @@
 This file describes changes in the format package.
 
+# 1.4.5 (2026-04-24)
+
+  - Minor janitorial updates
+
 # 1.4.4 (2024-01-09)
 
   - Add missing bibliography
