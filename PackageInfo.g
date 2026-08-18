@@ -72,8 +72,8 @@ formations of finite solvable groups.",
 
 PackageDoc := rec(
   BookName := "FORMAT",
-  ArchiveURLSubset := ["doc", "htm"],
-  HTMLStart := "htm/chapters.htm",
+  ArchiveURLSubset := ["doc"],
+  HTMLStart := "doc/chap0_mj.html",
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Formations of Finite Soluble Groups",

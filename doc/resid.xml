@@ -1,0 +1,50 @@
+<!-- W  resid.tex       FORMAT documentation        B. Eick and C.R.B. Wright / 12-28-99 -->
+<Chapter Label="Residual Functions">
+<Heading>Residual Functions</Heading>
+<Section>
+<Heading>Residual Functions</Heading>
+<ManSection>
+<Oper Name="ResidualWrtFormation" Arg="G, F"/>
+<Description>
+Let <A>G</A> be a finite solvable group and <A>F</A> a formation. Then
+<C>ResidualWrtFormation</C> returns the <A>F</A>-residual subgroup of <A>G</A>.
+<P/>
+The following special cases have their own functions.
+</Description>
+</ManSection>
+<ManSection>
+<Attr Name="NilpotentResidual" Arg="G"/>
+<Description>
+This is the last term of the descending central series of <A>G</A>.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="PResidual" Arg="G, p"/>
+<Description>
+This is the smallest normal subgroup of <A>G</A> whose index is a power of 
+the prime <A>p</A>.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="PiResidual" Arg="G, primes"/>
+<Description>
+This is the smallest normal subgroup of <A>G</A> whose index is divisible 
+only by primes in the list <A>primes</A>.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="CoprimeResidual" Arg="G, primes"/>
+<Description>
+This is the smallest normal subgroup of <A>G</A> whose index is
+divisible only by primes <E>not</E> in the list <C>primes</C>.
+</Description>
+</ManSection>
+<ManSection>
+<Attr Name="ElementaryAbelianProductResidual" Arg="G"/>
+<Description>
+This is the smallest normal subgroup of <A>G</A> whose factor group is a
+direct product of groups of prime order.
+</Description>
+</ManSection>
+</Section>
+</Chapter>

@@ -1,0 +1,53 @@
+<!-- W  cover.tex             FORMAT documentation    B. Eick and C.R.B. Wright / 10-31-11 -->
+<Chapter Label="Covering Subgroups">
+<Heading>Covering Subgroups</Heading>
+Let <M>\mathcal{X}</M> be a collection of groups closed under taking homomorphic images.
+An <E><M>\mathcal{X}</M>-covering subgroup</E> of a group <M>G</M> is a subgroup <M>E</M> satisfying
+<P/>
+(C)  <M>E \in \mathcal{X}</M>, and <M>EV = U</M> whenever <M>E \le U \le G</M> with <M>U/V \in
+\mathcal{X}</M>.
+<P/>
+It follows from the definition that an <M>\mathcal{X}</M>-covering subgroup <M>E</M> of <M>G</M> is
+also <M>\mathcal{X}</M>-covering in every subgroup <M>U</M> of <M>G</M> that contains <M>E</M>, and an
+easy argument shows that <M>E</M> is an <E><M>\mathcal{X}</M>-projector</E> of every such <M>U</M>,
+i.e., <M>E</M> satisfies
+<P/>
+(P)  <M>EK/K</M> is an <M>\mathcal{X}</M>-maximal subgroup of <M>U/K</M> whenever <M>K</M> is
+normal in <M>U</M>.
+<P/>
+Gaschütz showed that if <M>\mathcal{F}</M> is a locally defined formation,
+then every finite solvable group has an <M>\mathcal{F}</M>-covering subgroup. Indeed,
+locally defined formations are the only formations with this property. For
+such formations the <M>\mathcal{F}</M>-projectors and <M>\mathcal{F}</M>-covering subgroups of a
+solvable group coincide and form a single conjugacy class of subgroups.
+(See <Cite Key="DH"/> for details.)
+<Section>
+<Heading>Covering Subgroups</Heading>
+<ManSection>
+<Oper Name="CoveringSubgroup1" Arg="G, F"/>
+<Oper Name="CoveringSubgroup2" Arg="G, F"/>
+<Oper Name="CoveringSubgroupWrtFormation" Arg="G, F"/>
+<Description>
+If <A>F</A> is a locally defined integrated formation in &GAP; and if <A>G</A> is
+a finite solvable group, then the command <C>CoveringSubgroup1( <A>G</A>, <A>F</A> )</C>
+returns an <A>F</A>-covering subgroup of <A>G</A>.
+The function <C>CoveringSubgroup2</C> uses a different algorithm to compute
+<M>\mathcal{F}</M>-covering subgroups. The user may choose either function. Experiments with large groups suggest that <C>CoveringSubgroup1</C> is somewhat faster.
+<C>CoveringSubgroupWrtFormation</C> checks first to see if either of these
+two functions has already computed an <A>F</A>-covering subgroup of <A>G</A> and, if
+not, it  calls <C>FCoveringGroup1</C> to compute one.
+<P/>
+Nilpotent-covering subgroups are also called <E>Carter subgroups</E>.
+</Description>
+</ManSection>
+<ManSection>
+<Attr Name="CarterSubgroup" Arg="G"/>
+<Description>
+The command <C>CarterSubgroup( <A>G</A> )</C> is equivalent to 
+<C>CoveringSubgroupWrtFormation( <A>G</A>, Formation( "Nilpotent" ) )</C>.
+<P/>
+All of these functions call upon <M>\mathcal{F}</M>-normalizer algorithms as subroutines.
+</Description>
+</ManSection>
+</Section>
+</Chapter>
