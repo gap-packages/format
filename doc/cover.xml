@@ -35,7 +35,7 @@ The function <C>CoveringSubgroup2</C> uses a different algorithm to compute
 <M>\mathcal{F}</M>-covering subgroups. The user may choose either function. Experiments with large groups suggest that <C>CoveringSubgroup1</C> is somewhat faster.
 <C>CoveringSubgroupWrtFormation</C> checks first to see if either of these
 two functions has already computed an <A>F</A>-covering subgroup of <A>G</A> and, if
-not, it  calls <C>FCoveringGroup1</C> to compute one.
+not, it  calls <C>CoveringSubgroup1</C> to compute one.
 <P/>
 Nilpotent-covering subgroups are also called <E>Carter subgroups</E>.
 </Description>

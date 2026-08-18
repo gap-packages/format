@@ -4,7 +4,7 @@
 Let <M>\mathcal{F}</M> be an integrated locally defined formation, and let <M>G</M> be 
 a finite solvable group with Sylow complement basis 
 <M>\Sigma := 
-\{ S^p \mid p</M> divides  <M> \|G\| \}</M>. 
+\{ S^p \mid p</M> divides  <M> |G| \}</M>. 
 Let <M>\pi</M> be the set of prime
 divisors of the order of <M>G</M> that are in the support of <M>\mathcal{F}</M> and 
 <M>{\nu}</M> the remaining prime divisors of the order  of <M>G</M>. 
@@ -33,7 +33,7 @@ The underlying algorithm here requires <A>G</A> to have a special pcgs (see sect
 <M>\Sigma</M> associated with this pcgs is then used to compute the
 <A>F</A>-normalizer of <A>G</A> with respect to <M>\Sigma</M>. This process means that 
 in the case of a finite solvable group <A>G</A> that does not have a special pcgs, 
-the first call of <C>FNormalizerWrtFormation</C> (or similarly of <C>FormationCoveringGroup</C>) 
+the first call of <C>FNormalizerWrtFormation</C> (or similarly of <C>CoveringSubgroupWrtFormation</C>) 
 will  take longer than subsequent calls, since it will include the
 computation  of a special pcgs.
 <P/>

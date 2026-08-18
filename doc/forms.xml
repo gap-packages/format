@@ -1,17 +1,17 @@
 <!-- W  forms.tex             FORMAT documentation    B. Eick and C.R.B. Wright / 10-31-11 -->
 <Chapter Label="Formations in GAP">
 <Heading>Formations in GAP</Heading>
-A <E>formation</E> is a class <M>{\mathcal{F}}</M> of groups closed under taking epimorphic
+A <E>formation</E> is a class <M>\mathcal{F}</M> of groups closed under taking epimorphic
 images and subdirect products. Closure under subdirect products is equivalent to the property that each finite group <M>G</M>  has a unique 
-smallest normal subgroup <M>G^{\mathcal{F}}</M> with factor group <M>G / G^{\mathcal{F}}</M> in&nbsp;<M>\mathcal{F}</M>. 
-The subgroup <M>G^{\mathcal{F}}</M> is called the <E><M>\mathcal{F}</M>-residual</E> subgroup of <M>G</M>. Thus, 
+smallest normal subgroup <M>G^\mathcal{F}</M> with factor group <M>G / G^\mathcal{F}</M> in&nbsp;<M>\mathcal{F}</M>. 
+The subgroup <M>G^\mathcal{F}</M> is called the <E><M>\mathcal{F}</M>-residual</E> subgroup of <M>G</M>. Thus, 
 for example, the derived subgroup of <M>G</M> is its residual for the formation 
 of abelian groups, and the residual for the formation of nilpotent groups 
 is the last term of the descending central series.
 <P/>
-In &FORMAT; a formation is described by a function that computes <M>G^{\mathcal{F}}</M> 
+In &FORMAT; a formation is described by a function that computes <M>G^\mathcal{F}</M> 
 for each (finite solvable) group <M>G</M>, and from that perspective <M>\mathcal{F}</M> 
-consists of the groups <M>G</M> for which <M>G^{\mathcal{F}}</M> is trivial. To define a 
+consists of the groups <M>G</M> for which <M>G^\mathcal{F}</M> is trivial. To define a 
 formation that is not one of the standard examples provided (see below), 
 one must give &GAP; an identifier for the formation and also some method 
 for computing residual subgroups.
@@ -127,7 +127,7 @@ Section <Ref Chap="Formation Examples"/> contains an example of such usage.
 <Description>
 A local definition of a formation may always be replaced by an
 integrated one without changing the formation itself, though the meaning
-of <M>{\mathcal{F}}</M>-central may change.  Let <A>F</A> be a locally defined &GAP; formation with
+of <M>\mathcal{F}</M>-central may change.  Let <A>F</A> be a locally defined &GAP; formation with
 name <C><A>name</A></C>.  If <A>F</A> is already integrated, then <C>Integrated( <A>F</A> )</C> 
 yields <A>F</A> itself. Otherwise, it yields a  formation <C><A>name</A>Int</C> that is
 abstractly the same as <A>F</A> but has integrated local definition.
@@ -149,7 +149,7 @@ lists but has no mathematical significance.
 The intersection of two &GAP; formations <A>F1</A> and 
 <A>F2</A> is again a formation. <C>Intersection</C> produces the new formation
 <C>(<A>name1</A>And<A>name2</A>)</C>, which has attribute <C>ResidualFunctionOfFormation</C> if
-either <A>F1</A> or <A>F2</A> does, has <C>FScreen</C> whenever both formations have <C>FScreen</C>, and is
+either <A>F1</A> or <A>F2</A> does, has <C>fScreen</C> whenever both formations have <C>fScreen</C>, and is
 integrated if both are.
 </Description>
 </ManSection>
