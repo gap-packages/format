@@ -20,7 +20,7 @@ the GAP `pkg` directory, start GAP and use the command
 
 ## Examples
 
-The subdirectory `grp' contains various examples of pc groups. They
+The subdirectory `grp` contains various examples of pc groups. They
 can be used as examples for applications of the package.
 
 

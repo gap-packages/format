@@ -1,0 +1,53 @@
+<!-- W  norm.tex              FORMAT documentation    B. Eick and C.R.B. Wright / 10-31-11 -->
+<Chapter Label="FNormalizers">
+<Heading>FNormalizers</Heading>
+Let <M>\mathcal{F}</M> be an integrated locally defined formation, and let <M>G</M> be 
+a finite solvable group with Sylow complement basis 
+<M>\Sigma := 
+\{ S^p \mid p</M> divides  <M> |G| \}</M>. 
+Let <M>\pi</M> be the set of prime
+divisors of the order of <M>G</M> that are in the support of <M>\mathcal{F}</M> and 
+<M>{\nu}</M> the remaining prime divisors of the order  of <M>G</M>. 
+Then the <E><M>\mathcal{F}</M>-normalizer</E> of <M>G</M> with respect to <M>\Sigma</M> is defined 
+to be
+<M>\bigcap_{q \in \nu} S^q \cap 
+ \bigcap_{p \in \pi} N_G( G^{\mathcal{F}(p)} \cap S^p )</M>. 
+The special case <M>\mathcal{F}(p) = \{ 1 \}</M> for all <M>p</M> defines the formation 
+of nilpotent groups, whose <M>\mathcal{F}</M>-normalizers  
+are the <E>system normalizers</E> of <M>G</M>. The <M>\mathcal{F}</M>-normalizers of a group 
+<M>G</M> for a given <M>\mathcal{F}</M> are all conjugate. They cover <M>\mathcal{F}</M>-central chief 
+factors and avoid <M>\mathcal{F}</M>-hypereccentric ones.
+<Section>
+<Heading>FNormalizers</Heading>
+<ManSection>
+<Oper Name="FNormalizerWrtFormation" Arg="G, F"/>
+<Attr Name="SystemNormalizer" Arg="G"/>
+<Description>
+If <A>F</A> is a locally defined integrated formation in &GAP; and 
+<A>G</A> is a finite solvable group, then the function <C>FNormalizerWrtFormation</C>
+returns an <A>F</A>-normalizer of <A>G</A>. The function <C>SystemNormalizer</C> yields a 
+system normalizer of <A>G</A>.
+<P/>
+The underlying algorithm here requires <A>G</A> to have a special pcgs (see section <Ref Chap="Polycyclic Groups" BookName="ref"/> in the &GAP; reference manual), so the algorithm's first step is
+ to compute such a pcgs for <A>G</A> if one is not known. The complement basis
+<M>\Sigma</M> associated with this pcgs is then used to compute the
+<A>F</A>-normalizer of <A>G</A> with respect to <M>\Sigma</M>. This process means that 
+in the case of a finite solvable group <A>G</A> that does not have a special pcgs, 
+the first call of <C>FNormalizerWrtFormation</C> (or similarly of <C>CoveringSubgroupWrtFormation</C>) 
+will  take longer than subsequent calls, since it will include the
+computation  of a special pcgs.
+<P/>
+The <C>FNormalizerWrtFormation</C> algorithm next computes an <A>F</A>-system for <A>G</A>, a
+complicated record that includes a pcgs corresponding to a normal series 
+of <A>G</A> whose factors are either <A>F</A>-central or <A>F</A>-hypereccentric. A subset 
+of this pcgs then exhibits the <A>F</A>-normalizer of <A>G</A> determined by
+<M>\Sigma</M>. The list <C>ComputedFNormalizerWrtFormations( <A>G</A> )</C> stores the <A>F</A>-normalizers
+of <A>G</A> that have been found for various formations <A>F</A>.
+<P/>
+The <C>FNormalizerWrtFormation</C> function can be used to study the subgroups of a 
+single group <A>G</A>, as illustrated in an example in Section <Ref Chap="Other Applications"/>. In that case it is sufficient to have a function
+<C>ScreenOfFormation</C> that  returns a normal subgroup of <A>G</A> on each call.
+</Description>
+</ManSection>
+</Section>
+</Chapter>
