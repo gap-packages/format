@@ -8,7 +8,7 @@ Suppose that <M>G</M> is a finite solvable group with an elementary abelian
 normal subgroup <M>A</M> for which there exists a normal subgroup <M>N</M> of <M>G</M>
 containing <M>A</M> such that <M>N/A</M> is nilpotent and <M>[N,A] = A</M>. Then <M>A</M> has a complement in <M>G</M>, and all complements
 are conjugate---indeed, they can be viewed as generalized
-<M>\mathcal{F}</M>-normalizers. We will show the idea, which of course is most useful with very large groups, by using <C>FNormalizerWrtFormation</C> to find a complement to an
+<M>&calF;</M>-normalizers. We will show the idea, which of course is most useful with very large groups, by using <C>FNormalizerWrtFormation</C> to find a complement to an
 elementary abelian normal subgroup, in this case to <M>K</M> in <M>S_4</M> with <M>N =
 A_4</M>.
 <P/>
@@ -35,8 +35,8 @@ gap> comp := FNormalizerWrtFormation(s4, form); Size(comp);
 Group([ f1, f2 ])
 6
 ]]></Example>
-A user who wanted to employ the <M>\mathcal{F}</M>-normalizer technique to compute very
+A user who wanted to employ the <M>&calF;</M>-normalizer technique to compute very
 many complements in this way would probably wish to create a new &GAP;
 function by extracting portions of the code that computes
-<M>\mathcal{F}</M>-systems.
+<M>&calF;</M>-systems.
 </Chapter>

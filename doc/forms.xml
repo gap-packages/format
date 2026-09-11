@@ -1,36 +1,36 @@
 <!-- W  forms.tex             FORMAT documentation    B. Eick and C.R.B. Wright / 10-31-11 -->
 <Chapter Label="Formations in GAP">
 <Heading>Formations in GAP</Heading>
-A <E>formation</E> is a class <M>\mathcal{F}</M> of groups closed under taking epimorphic
+A <E>formation</E> is a class <M>&calF;</M> of groups closed under taking epimorphic
 images and subdirect products. Closure under subdirect products is equivalent to the property that each finite group <M>G</M>  has a unique 
-smallest normal subgroup <M>G^\mathcal{F}</M> with factor group <M>G / G^\mathcal{F}</M> in&nbsp;<M>\mathcal{F}</M>. 
-The subgroup <M>G^\mathcal{F}</M> is called the <E><M>\mathcal{F}</M>-residual</E> subgroup of <M>G</M>. Thus, 
+smallest normal subgroup <M>G^&calF;</M> with factor group <M>G / G^&calF;</M> in&nbsp;<M>&calF;</M>. 
+The subgroup <M>G^&calF;</M> is called the <E><M>&calF;</M>-residual</E> subgroup of <M>G</M>. Thus, 
 for example, the derived subgroup of <M>G</M> is its residual for the formation 
 of abelian groups, and the residual for the formation of nilpotent groups 
 is the last term of the descending central series.
 <P/>
-In &FORMAT; a formation is described by a function that computes <M>G^\mathcal{F}</M> 
-for each (finite solvable) group <M>G</M>, and from that perspective <M>\mathcal{F}</M> 
-consists of the groups <M>G</M> for which <M>G^\mathcal{F}</M> is trivial. To define a 
+In &FORMAT; a formation is described by a function that computes <M>G^&calF;</M> 
+for each (finite solvable) group <M>G</M>, and from that perspective <M>&calF;</M> 
+consists of the groups <M>G</M> for which <M>G^&calF;</M> is trivial. To define a 
 formation that is not one of the standard examples provided (see below), 
 one must give &GAP; an identifier for the formation and also some method 
 for computing residual subgroups.
 <P/>
 Some of the most interesting formations can also be described by <Q>local definition.</Q> For each prime <M>p</M> 
-let <M>\mathcal{F}(p)</M> be a formation or the empty class, and let <M>\mathcal{F}</M> be the class 
+let <M>&calF;(p)</M> be a formation or the empty class, and let <M>&calF;</M> be the class 
 of all finite solvable groups <M>G</M> such that for each prime <M>p</M> and each <M>p</M>-chief factor <M>H/K</M> of <M>G</M> the group of automorphisms that <M>G</M> 
-induces on <M>H/K</M> by conjugation belongs to <M>\mathcal{F}(p)</M>. Then <M>\mathcal{F}</M> is a 
-formation,  with  <E>local definition</E>  the set of <M> \mathcal{F}(p)</M>s. 
-The set of primes <M>p</M> for which <M>\mathcal{F}(p)</M> is not empty is called the 
-<E>support</E> of&nbsp;<M>\mathcal{F}</M>. A <M>p</M>-chief factor is <E><M>\mathcal{F}</M>-central</E> in case <M>G</M>
-induces an <M>\mathcal{F}(p)</M>-group on it or, equivalently, in case <M>G^{\mathcal{F}(p)}</M>
+induces on <M>H/K</M> by conjugation belongs to <M>&calF;(p)</M>. Then <M>&calF;</M> is a 
+formation,  with  <E>local definition</E>  the set of <M> &calF;(p)</M>s. 
+The set of primes <M>p</M> for which <M>&calF;(p)</M> is not empty is called the 
+<E>support</E> of&nbsp;<M>&calF;</M>. A <M>p</M>-chief factor is <E><M>&calF;</M>-central</E> in case <M>G</M>
+induces an <M>&calF;(p)</M>-group on it or, equivalently, in case <M>G^{&calF;(p)}</M>
 centralizes it. It is possible to define a formation in &FORMAT; by
 giving such a local definition. Indeed one can define a kind of
 generalized formation by giving what is called a normal subgroup function 
 or <E>screen</E>, which specifies arbitrary normal subgroups, not necessarily 
-of form <M>G^{\mathcal{F}(p)}</M>, to test <Q>centrality.</Q> Section&nbsp;<Ref Chap="Other Applications"/> describes one such usage of general screens. Most applications of formation 
+of form <M>G^{&calF;(p)}</M>, to test <Q>centrality.</Q> Section&nbsp;<Ref Chap="Other Applications"/> describes one such usage of general screens. Most applications of formation 
 theory to solvable groups require local definition, as do the &GAP; 
-functions for computing <M>\mathcal{F}</M>-normalizers and <M>\mathcal{F}</M>-covering subgroups.
+functions for computing <M>&calF;</M>-normalizers and <M>&calF;</M>-covering subgroups.
 <Section>
 <Heading>Formations in GAP</Heading>
 <ManSection>
@@ -81,7 +81,7 @@ returns the  residual function of a formation.
 <ManSection>
 <Attr Name="ScreenOfFormation" Arg="F"/>
 <Description>
-If <A>F</A> is locally defined by some screen of <M>\mathcal{F}(p)</M>s, 
+If <A>F</A> is locally defined by some screen of <M>&calF;(p)</M>s, 
 then <C>HasScreenOfFormation( <A>F</A> )</C> is <K>true</K>, <C>ScreenOfFormation( <A>F</A> )</C> is a function of two variables, <A>group</A> and <A>prime</A>, and 
 <C>ScreenOfFormation( <A>F</A> )(  <A>G</A>, <A>p</A> )</C> returns <M>G^{F(p)}</M> if <A>p</A> is
 in the support of <A>F</A> and  gives the empty list otherwise.
@@ -113,8 +113,8 @@ of the support of <A>F</A> and <A>primes</A>.
 <ManSection>
 <Prop Name="IsIntegrated" Arg="F"/>
 <Description>
-The local definition  is called <E>integrated</E> in case <M>\mathcal{F}(p)</M> is contained in
-<M>\mathcal{F}</M>  for each  prime&nbsp;<M>p</M>. The optional property <C>IsIntegrated</C> makes sense only if <C>HasScreenOfFormation( <A>F</A> )</C> is <K>true</K>. Notice that
+The local definition  is called <E>integrated</E> in case <M>&calF;(p)</M> is contained in
+<M>&calF;</M>  for each  prime&nbsp;<M>p</M>. The optional property <C>IsIntegrated</C> makes sense only if <C>HasScreenOfFormation( <A>F</A> )</C> is <K>true</K>. Notice that
 some of the functions described below will require that all of the attributes <C>HasScreenOfFormation(
 <A>F</A> )</C>, <C>HasIsIntegrated( <A>F</A> )</C> and <C>IsIntegrated( <A>F</A> )</C> are <K>true</K>. If
 unbound, this property can be bound with <C>SetIsIntegrated</C>, but it is up to the
@@ -127,7 +127,7 @@ Section <Ref Chap="Formation Examples"/> contains an example of such usage.
 <Description>
 A local definition of a formation may always be replaced by an
 integrated one without changing the formation itself, though the meaning
-of <M>\mathcal{F}</M>-central may change.  Let <A>F</A> be a locally defined &GAP; formation with
+of <M>&calF;</M>-central may change.  Let <A>F</A> be a locally defined &GAP; formation with
 name <C><A>name</A></C>.  If <A>F</A> is already integrated, then <C>Integrated( <A>F</A> )</C> 
 yields <A>F</A> itself. Otherwise, it yields a  formation <C><A>name</A>Int</C> that is
 abstractly the same as <A>F</A> but has integrated local definition.

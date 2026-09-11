@@ -1,22 +1,22 @@
 <!-- W  norm.tex              FORMAT documentation    B. Eick and C.R.B. Wright / 10-31-11 -->
 <Chapter Label="FNormalizers">
 <Heading>FNormalizers</Heading>
-Let <M>\mathcal{F}</M> be an integrated locally defined formation, and let <M>G</M> be 
+Let <M>&calF;</M> be an integrated locally defined formation, and let <M>G</M> be 
 a finite solvable group with Sylow complement basis 
 <M>\Sigma := 
 \{ S^p \mid p</M> divides  <M> |G| \}</M>. 
 Let <M>\pi</M> be the set of prime
-divisors of the order of <M>G</M> that are in the support of <M>\mathcal{F}</M> and 
+divisors of the order of <M>G</M> that are in the support of <M>&calF;</M> and 
 <M>{\nu}</M> the remaining prime divisors of the order  of <M>G</M>. 
-Then the <E><M>\mathcal{F}</M>-normalizer</E> of <M>G</M> with respect to <M>\Sigma</M> is defined 
+Then the <E><M>&calF;</M>-normalizer</E> of <M>G</M> with respect to <M>\Sigma</M> is defined 
 to be
 <M>\bigcap_{q \in \nu} S^q \cap 
- \bigcap_{p \in \pi} N_G( G^{\mathcal{F}(p)} \cap S^p )</M>. 
-The special case <M>\mathcal{F}(p) = \{ 1 \}</M> for all <M>p</M> defines the formation 
-of nilpotent groups, whose <M>\mathcal{F}</M>-normalizers  
-are the <E>system normalizers</E> of <M>G</M>. The <M>\mathcal{F}</M>-normalizers of a group 
-<M>G</M> for a given <M>\mathcal{F}</M> are all conjugate. They cover <M>\mathcal{F}</M>-central chief 
-factors and avoid <M>\mathcal{F}</M>-hypereccentric ones.
+ \bigcap_{p \in \pi} N_G( G^{&calF;(p)} \cap S^p )</M>. 
+The special case <M>&calF;(p) = \{ 1 \}</M> for all <M>p</M> defines the formation 
+of nilpotent groups, whose <M>&calF;</M>-normalizers  
+are the <E>system normalizers</E> of <M>G</M>. The <M>&calF;</M>-normalizers of a group 
+<M>G</M> for a given <M>&calF;</M> are all conjugate. They cover <M>&calF;</M>-central chief 
+factors and avoid <M>&calF;</M>-hypereccentric ones.
 <Section>
 <Heading>FNormalizers</Heading>
 <ManSection>
