@@ -40,22 +40,13 @@ Group([ (1,4)(2,3), (1,2)(3,4) ])
 gap> KnownAttributesOfObject(sup);
 [ "NameOfFormation", "ScreenOfFormation", "ResidualFunctionOfFormation" ]
 
-# doc/examples.xml:56-70
+# doc/examples.xml:56-61
 gap> FNormalizerWrtFormation(G, sup);
 Group([ (3,4), (2,4,3) ])
 gap> CoveringSubgroupWrtFormation(G, sup);
 Group([ (3,4), (2,4,3) ])
-gap> KnownAttributesOfObject(G);
-[ "Size", "OneImmutable", "SmallestMovedPoint", "NrMovedPoints", 
-  "MovedPoints", "GeneratorsOfMagmaWithInverses", "TrivialSubmagmaWithOne", 
-  "MultiplicativeNeutralElement", "DerivedSubgroup", "IsomorphismPcGroup", 
-  "IsomorphismSpecialPcGroup", "PcgsElementaryAbelianSeries", "HomePcgs", 
-  "Pcgs", "StabChainOptions", "ComputedResidualWrtFormations", 
-  "ComputedAbelianExponentResiduals", "ComputedFNormalizerWrtFormations", 
-  "ComputedCoveringSubgroup1s", "ComputedCoveringSubgroup2s", 
-  "SystemNormalizer", "CarterSubgroup" ]
 
-# doc/examples.xml:75-86
+# doc/examples.xml:77-88
 gap> ComputedResidualWrtFormations(G);
 [ formation of Supersolvable groups, Group([ (1,4)(2,3), (1,2)(3,4) ]) ]
 gap> ComputedFNormalizerWrtFormations(G);
@@ -67,22 +58,22 @@ gap> ComputedCoveringSubgroup1s(G);
 [ formation of Nilpotent groups, Group([ (3,4), (1,3)(2,4), (1,2)(3,4) ]), 
   formation of Supersolvable groups, Group([ (3,4), (2,4,3) ]) ]
 
-# doc/examples.xml:91-94
+# doc/examples.xml:93-96
 gap> s4 := SymmetricGroup(IsPcGroup, 4);
 <pc group of size 24 with 4 generators>
 
-# doc/examples.xml:96-100
+# doc/examples.xml:98-102
 gap> SystemNormalizer(s4); CarterSubgroup(s4);
 Group([ f1 ])
 Group([ f1, f4, f3*f4 ])
 
-# doc/examples.xml:102-107
+# doc/examples.xml:104-109
 gap> sl := SpecialLinearGroup(2,3);
 SL(2,3)
 gap> h := PcGroupWithPcgs(Pcgs(sl));
 <pc group of size 24 with 4 generators>
 
-# doc/examples.xml:109-116
+# doc/examples.xml:111-118
 gap> CarterSubgroup(sl); Size(last);
 <group of 2x2 matrices over GF(3)>
 6
@@ -90,7 +81,7 @@ gap> SystemNormalizer(h); CarterSubgroup(h);
 Group([ f1, f4 ])
 Group([ f1, f4 ])
 
-# doc/examples.xml:118-129
+# doc/examples.xml:120-131
 gap> ab := Formation("Abelian");
 formation of Abelian groups
 gap> KnownPropertiesOfObject(ab); KnownAttributesOfObject(ab);
@@ -102,30 +93,30 @@ gap> KnownPropertiesOfObject(nil2); KnownAttributesOfObject(nil2);
 [ "IsIntegrated" ]
 [ "NameOfFormation", "ScreenOfFormation", "ResidualFunctionOfFormation" ]
 
-# doc/examples.xml:131-136
+# doc/examples.xml:133-138
 gap> form := ProductOfFormations(ab, nil2);
 formation of (AbelianBy2Nilpotent) groups
 gap> KnownAttributesOfObject(form);
 [ "NameOfFormation", "ResidualFunctionOfFormation" ]
 
-# doc/examples.xml:138-143
+# doc/examples.xml:140-145
 gap> form2 := ProductOfFormations(nil2, ab);
 formation of (2NilpotentByAbelian) groups
 gap> KnownAttributesOfObject(form2);
 [ "NameOfFormation", "ScreenOfFormation", "ResidualFunctionOfFormation" ]
 
-# doc/examples.xml:145-151
+# doc/examples.xml:147-153
 gap> ResidualWrtFormation(G, form);  ResidualWrtFormation(G, form2);
 Group(())
 Group([ (1,2)(3,4), (1,3)(2,4) ])
 gap> KnownPropertiesOfObject(form2);
 [  ]
 
-# doc/examples.xml:155-158
+# doc/examples.xml:157-160
 gap> Integrated(form2);
 formation of (2NilpotentByAbelian)Int groups
 
-# doc/examples.xml:163-179
+# doc/examples.xml:165-181
 gap> FNormalizerWrtFormation(G, form2); CoveringSubgroupWrtFormation(G, form2);
 Group([ (3,4), (2,4,3) ])
 Group([ (3,4), (2,4,3) ])
@@ -142,7 +133,7 @@ gap> ComputedResidualWrtFormations(G);
   formation of Abelian groups, Alt( [ 1 .. 4 ] ), 
   formation of Supersolvable groups, Group([ (1,4)(2,3), (1,2)(3,4) ]) ]
 
-# doc/examples.xml:183-191
+# doc/examples.xml:185-193
 gap> pig := Formation("PiGroups", [2,5]);
 formation of (2,5)-Group groups with support [ 2, 5 ]
 gap> form := Intersection(pig, nil2);
@@ -151,7 +142,7 @@ gap> KnownAttributesOfObject(form);
 [ "NameOfFormation", "ScreenOfFormation", "SupportOfFormation", 
   "ResidualFunctionOfFormation" ]
 
-# doc/examples.xml:193-200
+# doc/examples.xml:195-202
 gap> form3 := ChangedSupport(nil2, [2,5]);
 formation of Changed2Nilpotent[ 2, 5 ] groups
 gap> SupportOfFormation(form3);
@@ -159,14 +150,14 @@ gap> SupportOfFormation(form3);
 gap> form = form3;
 false
 
-# doc/examples.xml:206-212
+# doc/examples.xml:208-214
 gap> ProductOfFormations(Intersection(pig, nil2), sup);
 formation of (((2,5)-GroupAnd2Nilpotent)BySupersolvable) groups
 gap> Intersection(pig, ProductOfFormations(nil2, sup));
 formation of ((2,5)-GroupAnd(2NilpotentBySupersolvable)) groups with support 
 [ 2, 5 ]
 
-# doc/examples.xml:214-225
+# doc/examples.xml:216-227
 gap> preform := rec( name := "MyOwn", 
 >  fScreen := function( G, p)
 >  return DerivedSubgroup( G );
@@ -178,7 +169,7 @@ gap> KnownAttributesOfObject(form); KnownPropertiesOfObject(form);
 [ "NameOfFormation", "ScreenOfFormation" ]
 [  ]
 
-# doc/examples.xml:228-236
+# doc/examples.xml:230-238
 gap> SetIsIntegrated(form, true);
 gap> ResidualWrtFormation(G, form);
 Group([ (1,2)(3,4), (1,3)(2,4) ])

@@ -58,6 +58,8 @@ gap> FNormalizerWrtFormation(G, sup);
 Group([ (3,4), (2,4,3) ])
 gap> CoveringSubgroupWrtFormation(G, sup);
 Group([ (3,4), (2,4,3) ])
+]]></Example>
+<Log><![CDATA[
 gap> KnownAttributesOfObject(G);
 [ "Size", "OneImmutable", "SmallestMovedPoint", "NrMovedPoints", 
   "MovedPoints", "GeneratorsOfMagmaWithInverses", "TrivialSubmagmaWithOne", 
@@ -67,7 +69,7 @@ gap> KnownAttributesOfObject(G);
   "ComputedAbelianExponentResiduals", "ComputedFNormalizerWrtFormations", 
   "ComputedCoveringSubgroup1s", "ComputedCoveringSubgroup2s", 
   "SystemNormalizer", "CarterSubgroup" ]
-]]></Example>
+]]></Log>
 The <C>AbelianExponentResidual</C>s were computed in connection with the
 local definition of <C>sup</C>. (<C>AbelianExponentResidual(G, n)</C> returns
 the smallest normal subgroup of <C>G</C> whose factor group is abelian of
