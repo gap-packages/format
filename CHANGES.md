@@ -1,5 +1,10 @@
 This file describes changes in the format package.
 
+# Unreleased
+
+  - Convert the manual from plain TeX to GAPDoc; its examples are now
+    extracted to `tst/` and run by the test suite
+
 # 1.4.5 (2026-04-24)
 
   - Minor janitorial updates
