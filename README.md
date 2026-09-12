@@ -20,7 +20,7 @@ the GAP `pkg` directory, start GAP and use the command
 
 ## Examples
 
-The subdirectory `grp' contains various examples of pc groups. They
+The subdirectory `grp` contains various examples of pc groups. They
 can be used as examples for applications of the package.
 
 
@@ -29,7 +29,7 @@ can be used as examples for applications of the package.
 The FORMAT package is free software; you can redistribute and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or (at
-your opinion) any later version.
+your option) any later version.
 
 The FORMAT package is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
